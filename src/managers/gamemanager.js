@@ -61,7 +61,7 @@ class GameManager {
 
     applyStatBonus() {
         const type = character.mapPositionName;
-        const extra = Phaser.Math.RND.pick([0, 0, 0, 1]);
+        const extra = Phaser.Math.RND.pick([-1, 0, 1, 2]);
         const quantity = 1 + extra;
         character.applyStat(type, quantity);
         console.log(`${type} increased by ${quantity}. ${type} is now ${character.stats[type]}.`);
